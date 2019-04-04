@@ -10,11 +10,12 @@ var mysql = require("mysql");
 // Set up the connection to mySQL and export
 // --------------------------------------------------- 
 
+// to deploy to Heroku - add something here!!
 // configure the connection with my credentials
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
-    user: "root",
+    user: "root",s
     password: "a9uLc2frfg7buEidFA",
     database: "oneDay_db"
 }); 
