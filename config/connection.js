@@ -7,7 +7,7 @@ var mysql = require("mysql");
 
 
 // ---------------------------------------------------
-// Set up the connection to mySQL
+// Set up the connection to mySQL and export
 // --------------------------------------------------- 
 
 // configure the connection with my credentials
