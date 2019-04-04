@@ -1,0 +1,58 @@
+{{!-- main container --}}
+<div class="container">
+
+    {{!-- jumbotron for the header --}}
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="header" class="jumbotron text-center p-2 mb-1">
+                <h1 class="display-3 font-weight-bold text-header"> -- One Day -- </h1>
+                <h1 class="font-weight-bold text-header">a bucket-list manager</h1>
+            </div>   
+        </div>
+    </div>
+
+    {{!-- form to enter the things the user wishes to do --}}
+    <div class="row">
+        <div class="col-sm-12">
+             <form>
+                <div class="form-group">
+                    <label for="thing">Before I die, I want to...</label>
+                    <input type="text" class="form-control" id="thing" required>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{!-- card for the things that haven't been done yet --}}
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="card">
+                <div id="head-survey" class="card-headers">What I will do</div>
+                <div id="things-to-do" class="card-body">
+                    <ul class="list-group">
+                        {{#each bucketLists}}
+                            {{> oneday/thing-block.handlebars done=false}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    {{!-- card for the things that have been done --}}
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="card">
+                <div id="head-survey" class="card-headers">What I have done</div>
+                <div id="things-to-do" class="card-body">
+                    <ul class="list-group">
+                        {{#each bucketLists}}
+                            {{> oneday/thing-block.handlebars done=true}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+</div>

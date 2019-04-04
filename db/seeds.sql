@@ -1,5 +1,5 @@
 -- insert data into the oneDay_db
-INSERT INTO bucketLists (plan_name)
+INSERT INTO bucketLists (thing_name)
 
 VALUES
 ("Learn the sign language"),
