@@ -31,7 +31,7 @@
                 <div id="things-to-do" class="card-body">
                     <ul class="list-group">
                         {{#each bucketLists}}
-                            {{> oneday/thing-block.handlebars done=false}}
+                            {{> oneday/thing-block.handlebars notDone=true}}
                         {{/each}}
                     </ul>
                 </div>
@@ -47,7 +47,7 @@
                 <div id="things-to-do" class="card-body">
                     <ul class="list-group">
                         {{#each bucketLists}}
-                            {{> oneday/thing-block.handlebars done=true}}
+                            {{> oneday/thing-block.handlebars notDone=false}}
                         {{/each}}
                     </ul>
                 </div>

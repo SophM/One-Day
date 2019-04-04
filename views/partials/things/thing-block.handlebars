@@ -1,15 +1,8 @@
 {{!-- to list the things --}}
-{{!-- if the thing hasn't been done --}}
-{{#if done}}
-    {{!-- list them and create a button "Done!" --}}
-    <li class="list-group-item">
-	    {{name}}
-	    <button class="has-been-done-BTN" data-id="{{id}}">Done!</button> 
-    </li>
-{{!-- if thing has been done --}}
-{{else}}
-    {{!-- just list it --}}
-    <li class="list-group-item">
-	    {{name}}
-    </li>
-{{/if}}
+<li class="list-group-item">
+	{{name}}
+    {{!-- if the thing hasn't been done, create a button "Done!" --}}
+    {{#if notDone}}
+	    <button class="has-been-done-BTN" data-id="{{id}}">Done!</button>
+    {{/if}}
+</li>
