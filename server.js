@@ -2,7 +2,7 @@
 // Dependencies
 // --------------------------------------------------- 
 
-// load the Express node packages
+// load the Express node package
 var express = require("express");
 
 
