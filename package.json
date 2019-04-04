@@ -1,22 +1,23 @@
 {
-  "name": "Bucket-List-Manager",
+  "name": "One-Day",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SophM/Bucket-List-Manager.git"
+    "url": "git+https://github.com/SophM/One-Day.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SophM/Bucket-List-Manager/issues"
+    "url": "https://github.com/SophM/One-Day/issues"
   },
-  "homepage": "https://github.com/SophM/Bucket-List-Manager#readme",
+  "homepage": "https://github.com/SophM/One-Day#readme",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
