@@ -25,7 +25,7 @@ $(document).ready(function() {
     $(".done-btn").on("click", function() {
         // grab the id of the thing for which "done!" has been clicked
         var id = $(this).data("id");
-        var newState = $(this).data("state");
+        var newState = 1;
 
         // grab the state of the thing for which "done!" has been clicked
         // and store in an object
@@ -33,14 +33,17 @@ $(document).ready(function() {
             done: newState
         };
 
-        // send a put request to the server
-        $.put("api/things/" + id, newStateForThing, function() {
+        // send a put request to the server - no shortcut the ajax put request - 
+        $.ajax ("api/things/" + id, {
+            type: "PUT",
+            data: newStateForThing
+        }).then(function() {
             // very short-live confirmation message in the browser's console
-            console.log("status of thing changed to", newSleep);
+            console.log("status of thing changed to", newState);
             // reload the page when the response comes back
             // to get the updated list
             location.reload();
-        })
+        });
     });
 
 });
