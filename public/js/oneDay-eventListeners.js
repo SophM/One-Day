@@ -13,6 +13,8 @@ $(document).ready(function() {
 
         // send the post request to the server 
         $.post("/api/things", newThing, function() {
+            // confirmation message
+            console.log("created new thing");
             // reload the page when the data come back
             // to get the updated list
             location.reload();

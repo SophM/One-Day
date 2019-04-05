@@ -22,14 +22,14 @@ var orm = {
                 throw err;
             }
             // send the results as an argument in callback function
-            console.log(results);
+            // console.log(results);
             cb(results);
         });
     },
     // define a method called selectOne
     insertOne: function(tableInput, ColName, Val, cb) {
         // define the query
-        var queryString = "INSERT INTO * (??) VALUES (?)";
+        var queryString = "INSERT INTO ?? (??) VALUES (?)";
         // connect to the database, do the request and process the results
         connection.query(queryString, [tableInput, ColName, Val], function(err, results) {
             // if err, tell us
@@ -37,6 +37,7 @@ var orm = {
                 throw err;
             }
             // send the results as an argument in callback function
+            console.log(results);
             cb(results);
         });
     },
