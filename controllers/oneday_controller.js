@@ -13,12 +13,12 @@ var thing = require("../models/thing.js");
 // Define the routes
 // ---------------------------------------------------
 
-// 
+// create an object to perform the routing functions
 var router = express.Router();
 
-// define the route to diplay the all the data from on the oneDay_db
+// define the route to display all the data from on oneDay_db
 router.get("/", function(req, res) {
-    // call the selectAll method in the model
+    // call the "selectAll" method from the model
     thing.selectAll(function(data) {
         // create an object with the data we got back because handlebars needs an object
         var hbsObject = {
@@ -27,6 +27,17 @@ router.get("/", function(req, res) {
         res.render("index", hbsObject);
     });
 });
+
+// define the route to add new data to oneDay_db
+router.post("/api/things", function(req, res) {
+    // call the "insertOne" method from the model
+    thing.insertOne("thing_name", req.body.thing, function(results) {
+        res.end();      
+    })
+});
+
+// define the route to update the data in oneDay_db
+
 
 // Export the router to make it available for other files (i. e., the server.js)
 module.exports = router;

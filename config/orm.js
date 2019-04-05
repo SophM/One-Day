@@ -21,36 +21,36 @@ var orm = {
             if (err) {
                 throw err;
             }
-            // send the results in a callback function
+            // send the results as an argument in calback function
             console.log(results);
             cb(results);
         });
     },
     // define a method called selectOne
-    selectOne: function(tableInput, ColName, ColVal) {
+    insertOne: function(tableInput, ColName, Val, cb) {
         // define the query
-        var queryString = "SELECT * FROM ?? WHERE ?? = ?";
+        var queryString = "INSERT INTO * (??) VALUES (?)";
         // connect to the database, do the request and process the results
-        connection.query(queryString, [tableInput, ColName, ColVal], function(err, results) {
+        connection.query(queryString, [tableInput, ColName, Val], function(err, results) {
             // if err, tell us
             if (err) {
                 throw err;
             }
-            // send the results in a callback function
+            // send the results as an argument in calback function
             cb(results);
         });
     },
     // define a method called updateOne
-    updateOne: function(tableInput, ColNewVal, ColName, ColVal) {
+    updateOne: function(tableInput, NewVal, ColName, Val, cb) {
         // define the query
         var queryString = "UPDATE ?? SET ? WHERE ?? = ?";
         // connect to the database, do the request and process the results
-        connection.query(queryString, [tableInput, ColNewVal, ColName, ColVal], function(err, results) {
+        connection.query(queryString, [tableInput, NewVal, ColName, Val], function(err, results) {
             // if err, tell us
             if (err) {
                 throw err;
             }
-            // send the results in a callback function
+            // send the results as an argument in calback function
             cb(results);
         });
     }
