@@ -42,11 +42,11 @@ var orm = {
         });
     },
     // define a method called updateOne
-    updateOne: function(tableInput, NewVal, ColName, Val, cb) {
+    updateOne: function(tableInput, ColOneName, NewVal, ColTwoName, Val, cb) {
         // define the query
-        var queryString = "UPDATE ?? SET ? WHERE ?? = ?";
+        var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
         // connect to the database, do the request and process the results
-        connection.query(queryString, [tableInput, NewVal, ColName, Val], function(err, results) {
+        connection.query(queryString, [tableInput, ColOneName, NewVal, ColTwoName, Val], function(err, results) {
             // if err, tell us
             if (err) {
                 throw err;

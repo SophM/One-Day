@@ -37,7 +37,12 @@ router.post("/api/things", function(req, res) {
 });
 
 // define the route to update the data in oneDay_db
-
+router.put("/api/things/:id", function(req, res) {
+    // call the "updateOne" method from the model
+    thing.updateOne("done", req.body.done, "id", req.params.id, function(results) {
+        res.end();      
+    });
+});
 
 // Export the router to make it available for other files (i. e., the server.js)
 module.exports = router;

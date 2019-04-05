@@ -26,9 +26,9 @@ var thing = {
             cb(results);
         })
     },
-    updateOne: function(ColNewVal, ColName, ColVal, cb) {
+    updateOne: function(ColOneName, NewVal, ColTwoName, Val, cb) {
         // call the "updateOne" method from the ORM
-        orm.updateOne("bucketLists", ColNewVal, ColName, ColVal, function(results) {
+        orm.updateOne("bucketLists", ColOneName, NewVal, ColTwoName, Val, function(results) {
             // send the results as an argument in callback function
             cb(results);
         })
