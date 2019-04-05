@@ -46,11 +46,19 @@
 /* for responsive font-size */
 @media screen and (max-width: 485px) {
     #text-title {
-        font-size: 3.7rem;
+        font-size: 3.4rem;
     }
 
     #text-subtitle {
         font-size: 1.7rem;
+    }
+
+    #text-container, #thing {
+        font-size: 1.2rem;
+    }
+
+    #label {
+        font-size: 1.4rem;
     }
 }
 
