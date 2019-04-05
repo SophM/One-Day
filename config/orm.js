@@ -14,7 +14,7 @@ var orm = {
     // define a method called selectAll
     selectAll: function(tableInput, cb){
         // define the query
-        var queryString = "SELECT * FROM ??";
+        var queryString = "SELECT * FROM ??;";
         // connect to the database, do the request and process the results
         connection.query(queryString, [tableInput], function(err, results) {
             // if err, tell us
@@ -22,6 +22,7 @@ var orm = {
                 throw err;
             }
             // send the results in a callback function
+            console.log(results);
             cb(results);
         });
     },

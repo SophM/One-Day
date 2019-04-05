@@ -12,26 +12,29 @@
     </div>
 
     {{!-- form to enter the things the user wishes to do --}}
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-sm-12">
              <form>
-                <div class="form-group">
+                <div class="form-group mb-1">
                     <label for="thing">Before I die, I want to...</label>
                     <input type="text" class="form-control" id="thing" required>
                 </div>
+                <button id="add-btn" type="submit" class="btn pt-0 float-right">Add it!</button>
             </form>
         </div>
     </div>
 
     {{!-- card for the things that haven't been done yet --}}
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-6">
+    <div class="row mt-4">
+        <div class="col-sm-12">
             <div class="card">
-                <div id="head-survey" class="card-headers">What I will do</div>
+                <div id="head-survey" class="card-header">What I will do</div>
                 <div id="things-to-do" class="card-body">
                     <ul class="list-group">
                         {{#each bucketLists}}
-                            {{> oneday/thing-block.handlebars notDone=true}}
+                            {{#unless done}}
+                                {{> things/thing-block notDone=true}}
+                            {{/unless}}
                         {{/each}}
                     </ul>
                 </div>
@@ -40,14 +43,16 @@
     </div>
 
     {{!-- card for the things that have been done --}}
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-6">
+    <div class="row mt-3">
+        <div class="col-sm-12">
             <div class="card">
-                <div id="head-survey" class="card-headers">What I have done</div>
+                <div id="head-survey" class="card-header">What I have done</div>
                 <div id="things-to-do" class="card-body">
                     <ul class="list-group">
                         {{#each bucketLists}}
-                            {{> oneday/thing-block.handlebars notDone=false}}
+                            {{#if done}}
+                                {{> things/thing-block notDone=false}}
+                            {{/if}}
                         {{/each}}
                     </ul>
                 </div>
