@@ -15,21 +15,21 @@ var thing = {
     selectAll: function(cb) {
         // call the "selectAll" method from the ORM
         orm.selectAll("bucketLists", function(results) {
-            // send the results as an argument in calback function
+            // send the results as an argument in callback function
             cb(results);
         });
     },
     insertOne: function(ColName, Val, cb) {
         // call the "insertOne" method from the ORM
         orm.insertOne("bucketLists", ColName, Val, function(results) {
-            // send the results as an argument in calback function
+            // send the results as an argument in callback function
             cb(results);
         })
     },
     updateOne: function(ColNewVal, ColName, ColVal, cb) {
         // call the "updateOne" method from the ORM
         orm.updateOne("bucketLists", ColNewVal, ColName, ColVal, function(results) {
-            // send the results as an argument in calback function
+            // send the results as an argument in callback function
             cb(results);
         })
     }
