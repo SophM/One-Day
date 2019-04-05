@@ -2,7 +2,7 @@
 
 
 
-[Click me to check "One Day" out!]()
+[Click me to check "One Day" out!](https://one-day-app.herokuapp.com/)
 
 The GitHub Repo for "One Day" can be accessed by clicking on "GitHub Repo Link", at the bottom the page.
 

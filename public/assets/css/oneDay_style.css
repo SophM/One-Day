@@ -31,7 +31,7 @@
     background-color: rgb(7.8, 12.9, 10.2, 0.8)
 }
 
-#text-container {
+#text-container, #thing {
     font-size: 1.4rem;
 }
 
