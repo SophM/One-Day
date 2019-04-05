@@ -37,7 +37,7 @@ var orm = {
                 throw err;
             }
             // send the results as an argument in callback function
-            console.log(results);
+            // console.log(results);
             cb(results);
         });
     },

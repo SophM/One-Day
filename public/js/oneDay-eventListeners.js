@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
     // event listener on the "add it!" button
-    $("#add-btn").on("submit", function(event) {
+    $("#add-new-thing").on("submit", function(event) {
         // prevent the page for refreshing itself
         event.preventDefault();
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
         // send the post request to the server 
         $.post("/api/things", newThing, function() {
             // confirmation message
-            console.log("created new thing");
+            // console.log("created new thing");
             // reload the page when the data come back
             // to get the updated list
             location.reload();
