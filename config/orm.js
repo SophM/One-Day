@@ -21,7 +21,7 @@ var orm = {
             if (err) {
                 throw err;
             }
-            // send the results as an argument in callback function
+            // send the results as an argument in a callback function
             // console.log(results);
             cb(results);
         });
@@ -36,7 +36,7 @@ var orm = {
             if (err) {
                 throw err;
             }
-            // send the results as an argument in callback function
+            // send the results as an argument in a callback function
             // console.log(results);
             cb(results);
         });
@@ -51,7 +51,7 @@ var orm = {
             if (err) {
                 throw err;
             }
-            // send the results as an argument in callback function
+            // send the results as an argument in a callback function
             cb(results);
         });
     }
